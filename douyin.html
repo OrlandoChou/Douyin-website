@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>抖音-记录美好生活</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/general.css">
+    <link rel="stylesheet" type="text/css" href="styles/basic.css">
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/sider.css">
+    <link rel="stylesheet" type="text/css" href="styles/video.css">
+    <link rel="stylesheet" type="text/css" href="styles/comment.css">
+    <link rel="stylesheet" type="text/css" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.css">
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;   
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }        
+    </style>
+</head>
+<body>
+    <div class="element-container">
+        <div class="left-element">
+            <div class="sider">
+                <div class="douyin-icon-box">
+                    <a href="//www.douyin.com/" class="douyin-icon"></a>
+                </div>
+                <div class="middle-sider">
+                    <div class="middle-sider-grid">
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:0 0"></div>
+                            <div class="sider-icon-text">首页</div>
+                        </div>
+                        <div class="middle-sider-grid-item choose-box">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-72px 0"></div>
+                            <div class="sider-icon-text">推荐</div>
+                            <div class="upgrade-icon">
+                            </div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-96px 0"></div>
+                            <div class="sider-icon-text">关注</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-144px 0"></div>
+                            <div class="sider-icon-text">朋友</div>
+                        </div>
+                    </div>
+                    <div class="custom-hr-parent">
+                        <hr class="custom-hr">
+                    </div>
+                    <div class="middle-sider-grid">
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-text-mine">我的
+                                <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" class="sider-text-mine-icon">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.071 6L4.536 1.464l-.908.908L7.257 6 3.628 9.628l.907.908 3.629-3.629L9.071 6z" fill="#FFFFFF" fill-opacity="0.5" class="sider-text-mine-icon-path">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-912px 0"></div>
+                            <div class="sider-icon-text">喜欢</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-960px 0"></div>
+                            <div class="sider-icon-text">收藏</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-1008px 0"></div>
+                            <div class="sider-icon-text">观看历史</div>
+                        </div>
+                    </div>
+                    <div class="custom-hr-parent">
+                        <hr class="custom-hr">
+                    </div>
+                    <div class="middle-sider-grid">
+                        <div class="middle-sider-grid-item olympic-small">
+                            <div class="olympic-icon-box">
+                                <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" fill="none" xmlns="http://www.w3.org/2000/svg" class="kgiFpZhw dEx6wdke"><mask id="olympics-small_svg__a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="11" y="34" width="30" height="11" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M29.019 37.552v-.006h.002c.01-.325-.082-.594-.28-.802-.24-.254-.607-.382-1.083-.382H23.15l-.692 4.159h-1.19l.877-5.262h1.31c.282-.007.51-.066.677-.18a.775.775 0 00.333-.538l.044-.264h1.453l-.01.067a1.223 1.223 0 01-.546.841l-.115.077h2.517c.415 0 .764.082 1.035.246.15.09.277.203.38.336l.064.095.125-.76h1.198l-.89 5.342h-1.197l.495-2.97zm-13.868.23l-.08.116v.002l-.044.062h5.227l-.159.961h-5.952l-.016.015c-.064.064-.13.131-.207.203l-.272.254h5.914l-.6 3.602c-.102.613-.682 1.11-1.294 1.11h-3.933c-.351 0-.648-.069-.882-.207a1.195 1.195 0 01-.323-.287l-.056-.085-.097.58H11.34l.613-3.675-.062.023c-.28.108-.58.19-.892.244l.185-1.113c.55-.128 1.168-.408 1.338-.602l.056-.065h-1.29l.16-.961h2.17l.016-.018a4.72 4.72 0 00.272-.356l.04-.06H11.76l.159-.96h2.614l.016-.029c.038-.074.072-.141.1-.203l.09-.2.023-.05h-2.733l.161-.973h6.486c.354 0 .684-.012.982-.038.28-.023.564-.085.843-.18l-.164.977a2.88 2.88 0 01-.84.188 16.27 16.27 0 01-.985.028H16.04l-.013.033a6.182 6.182 0 01-.116.276l-.053.119-.023.051h4.414l-.16.962h-4.775l-.015.025c-.03.05-.06.1-.09.146l-.02.031-.038.054zm2.355 5.4c.215 0 .42-.177.456-.393l.008-.046h-5.13l.06.072c.01.01.023.023.033.036.207.218.52.33.93.33h3.643zm-4.77-1.244h5.367l.075-.448H12.81l-.075.448zm5.575-1.25l.061-.37h-5.367l-.062.37h5.368zm8.234 1.56c.298.252.713.431 1.233.531l.005.003c.549.105 1.19.166 1.908.18l-.193 1.15c-.5.005-.979-.015-1.425-.061a6.58 6.58 0 01-1.238-.241 4.135 4.135 0 01-.992-.441 2.274 2.274 0 01-.672-.633l-.025-.036-.039.035a3.91 3.91 0 01-.884.624c-.344.18-.726.328-1.133.44a8.422 8.422 0 01-1.315.247c-.46.048-.941.072-1.433.066l.192-1.15a11.428 11.428 0 001.94-.19c.554-.108 1.026-.283 1.405-.524l.118-.074H20.74l.192-1.159h3.86l.078-.456h1.243l-.077.456h3.86l-.192 1.159h-3.245l.087.074zm.343-4.842a.889.889 0 01-.228.1l-.056.015.13-.792h-1.189l-.13.79-.052-.019a.613.613 0 01-.187-.097c-.13-.105-.18-.259-.146-.459l.036-.215H23.77l-.008.05c-.05.303.044.56.264.719.018.013.036.026.06.038h1.325l-.044.267h-2.02l-.159.961h1.123l-.087.072a2.033 2.033 0 01-.508.308c-.171.072-.38.13-.623.18l-.166.994a3.313 3.313 0 001.153-.315c.372-.18.7-.434.97-.757l.094-.112-.197 1.187h1.19l.194-1.177.056.113c.164.323.403.574.718.751.305.172.661.274 1.059.31l.166-.995a2.802 2.802 0 01-.576-.18 1.14 1.14 0 01-.403-.307l-.059-.072h1.13l.16-.961h-2.03l.043-.267h1.333a.55.55 0 00.046-.024l.026-.014c.274-.16.45-.415.502-.718l.008-.051h-1.295l-.036.215a.658.658 0 01-.297.462h.005zm13.986-2.226h-5.542l-.184 1.105h5.542l.184-1.105zm-7.897-.456h1.197l-.23 1.38h-1.198l.23-1.38zm4.65 4.044c-.674.81-2.228 1.666-3.786 2.087l-.185 1.115h6.799l.184-1.105c-.305-.002-.523-.084-.654-.24-.133-.16-.174-.396-.123-.698l.06-.362h-1.236l-.018.103c-.077.47.007.849.254 1.126l.064.071h-3l.247-.08c1.136-.369 1.932-1.103 2.705-1.814l.014-.013c.087-.082.175-.162.262-.241l.015-.013h1.587L41 37.599h-6.698l-.184 1.105h3.565l-.053.064h-.003zm-4.73 3.235a.983.983 0 00.25.472v-.002c.244.253.611.384 1.09.384h6.23l-.185 1.105h-6.198c-.416 0-.767-.084-1.041-.248a1.366 1.366 0 01-.38-.336l.216-1.29-.131.292a3.572 3.572 0 01-.595.923c-.397.39-.956.616-1.66.67l.194-1.162c.351-.067.62-.233.8-.492.195-.28.34-.71.436-1.277l.558-3.354h-1.015l.185-1.105h2.212l-.736 4.413a7.48 7.48 0 01-.23.987v.02z" fill="#000"></path></mask><g mask="url(#olympics-small_svg__a)" fill="none"><path d="M-49.26 34.468C1.902 37.839 35.2 46.658 68.604 87.894L63.23 24.875l-112.49 9.593z" fill="url(&quot;#olympics-small_svg__paint0_linear_172_63130&quot;)"></path><path d="M-20.551 27.788c29.421-2.51 86.42 27.876 90.934 80.813l-7.497-87.93-83.437 7.117z" fill="url(&quot;#olympics-small_svg__paint1_linear_172_63130&quot;)"></path><path d="M-29.115 30.922c69.908-5.769 82.337 21.287 94.639 46.291L60.938 23.16l-90.053 7.762z" fill="#FF2976"></path></g><mask id="olympics-small_svg__b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="5" y="9" width="41" height="20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M35.146 20.934c1.232 1.008 2.633 1.512 4.145 1.512l-.014.028c.322 0 .644-.028.98-.07 1.709-.224 3.109-1.022 4.201-2.338 1.19-1.443 1.68-3.11 1.484-4.944-.21-1.876-1.078-3.402-2.576-4.55-1.176-.897-2.507-1.36-3.963-1.36-.252 0-.518.015-.784.043a6.46 6.46 0 00-3.725 1.68 6.587 6.587 0 00-2.03 3.515l1.694.294a4.89 4.89 0 014.803-3.837c.784 0 1.54.182 2.255.546 1.96 1.009 3.01 3.193 2.562 5.322-.364 1.694-1.344 2.899-2.94 3.585a4.729 4.729 0 01-1.877.378 4.9 4.9 0 01-3.515-1.47 5.144 5.144 0 01-.84-1.149c-.014-.028-1.96-.252-1.96-.252a6.478 6.478 0 002.1 3.067zm.729-2.757a4.98 4.98 0 011.106 1.26l2.058.35a6.465 6.465 0 00-1.274-2.156c-1.12-1.26-2.52-2.003-4.145-2.199v1.722c.826.14 1.582.477 2.255 1.023zm-3.153 10.46c-1.652 0-3.137-.589-4.425-1.75-.938-.841-1.582-1.905-1.918-3.166a6.432 6.432 0 01-.07-3.137 6.689 6.689 0 011.862-3.346 6.3 6.3 0 011.583-1.135c.096-.053.201-.099.302-.143l.09-.039-.406 2.227a4.762 4.762 0 00-1.625 2.31 4.837 4.837 0 00.154 3.515 4.83 4.83 0 001.96 2.241c.799.49 1.653.714 2.717.714 1.373-.042 2.619-.63 3.557-1.708a4.64 4.64 0 001.022-1.919l1.68.364a6.614 6.614 0 01-1.344 2.605c-1.106 1.302-2.506 2.087-4.173 2.31-.336.043-.658.07-.98.07l.014-.013zm-3.177-9.357a4.623 4.623 0 01-.743.644l.14 1.904c.393-.196.757-.42 1.079-.686 1.89-1.526 2.758-3.487 2.562-5.84-.168-2.044-1.148-3.738-2.842-4.872-1.19-.799-2.437-1.205-3.711-1.205-.98 0-1.975.238-2.969.714-1.876.925-3.08 2.423-3.543 4.495l1.667.35a4.919 4.919 0 014.803-3.822c1.47 0 2.899.686 3.809 1.82.826 1.022 1.19 2.199 1.092 3.487-.084 1.148-.532 2.157-1.344 3.01zm-4.51 3.182a6.036 6.036 0 01-1.666-.49c-1.834-.827-3.066-2.185-3.668-4.02l1.932.21c.098.183.21.365.322.519.882 1.204 1.988 1.89 3.347 2.058l-.266 1.709v.014zm-13.862-.13c.21.043.658.113.658.113l.266-1.709s-2.913-1.022-3.725-2.45c-.924-1.625-.91-3.291.042-4.944.855-1.47 2.465-2.394 4.215-2.394a4.87 4.87 0 014.901 4.915v.392a4.893 4.893 0 01-1.316 2.969c-.14.154-.644.56-.644.56l-.168 2.1s1.666-.994 2.296-1.764c1.289-1.554 1.779-3.36 1.457-5.35-.252-1.61-1.023-2.954-2.283-3.99-1.246-1.037-2.646-1.555-4.159-1.555-.434 0-.896.042-1.344.126-1.848.35-3.29 1.345-4.327 2.927-.924 1.442-1.246 3.025-.952 4.733.224 1.26.77 2.38 1.638 3.319a6.542 6.542 0 003.445 2.003zm12.615-2.574l-.008-.012 2.01.39a6.628 6.628 0 00-2.843-3.753 6.654 6.654 0 00-2.477-.924 3.532 3.532 0 00-.403-.05l-.074-.006.098 1.737c1.023.14 1.919.56 2.689 1.274.34.314.924 1.213 1 1.331h-.006l.014.013zm-8.009 7.785a6.549 6.549 0 003.403 1.107v.027h.28c.896 0 1.778-.181 2.619-.546a6.56 6.56 0 002.758-2.212 6.377 6.377 0 001.022-2.157l.042-.168.056-.336h-1.736l-.042.168s-.126.378-.21.56a4.892 4.892 0 01-1.736 2.1c-.84.575-1.779.855-2.97.841H19a4.855 4.855 0 01-2.353-.868 4.914 4.914 0 01-1.624-1.919 4.83 4.83 0 01-.476-2.31c.028-.63.168-1.246.434-1.835a4.83 4.83 0 01.714-1.134c.196-.238.812-.756.812-.756l.28-2.143c-1.19.518-2.17 1.359-2.898 2.479-.504.756-.826 1.624-.98 2.563a6.562 6.562 0 00.055 2.394c.168.812.49 1.583.953 2.283a6.554 6.554 0 001.862 1.862z" fill="#D9D9D9"></path></mask><g mask="url(#olympics-small_svg__b)" fill="none"><path d="M-104.36 6.34C-25.77 11.519 25.382 25.065 76.696 88.41L68.441-8.396-104.36 6.34z" fill="url(&quot;#olympics-small_svg__paint2_linear_172_63130&quot;)"></path><path d="M-60.26-3.926C-15.062-7.78 72.499 38.897 79.433 120.216L67.914-14.857-60.259-3.927z" fill="url(&quot;#olympics-small_svg__paint3_linear_172_63130&quot;)"></path><path d="M-73.416.89C33.974-7.972 53.068 33.59 71.966 72.001l-7.044-83.034L-73.416.89z" fill="#FF2976"></path></g><defs><linearGradient id="olympics-small_svg__paint0_linear_172_63130" x1="-0.719" y1="35.779" x2="25.046" y2="47.355" gradientUnits="userSpaceOnUse"><stop offset="0.241" stop-color="#4579FF"></stop><stop offset="0.866" stop-color="#4579FF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint1_linear_172_63130" x1="66.635" y1="64.636" x2="1.681" y2="33.079" gradientUnits="userSpaceOnUse"><stop offset="0.417" stop-color="#FF35EB"></stop><stop offset="0.911" stop-color="#642DFF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint2_linear_172_63130" x1="-29.794" y1="8.353" x2="9.785" y2="26.136" gradientUnits="userSpaceOnUse"><stop offset="0.241" stop-color="#5337FF"></stop><stop offset="0.866" stop-color="#4579FF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint3_linear_172_63130" x1="73.673" y1="52.679" x2="-26.108" y2="4.202" gradientUnits="userSpaceOnUse"><stop offset="0.417" stop-color="#FF35EB"></stop><stop offset="0.911" stop-color="#642DFF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint0_linear_172_63130" x1="-0.719" y1="35.779" x2="25.046" y2="47.355" gradientUnits="userSpaceOnUse"><stop offset="0.241" stop-color="#4579FF"></stop><stop offset="0.866" stop-color="#4579FF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint1_linear_172_63130" x1="66.635" y1="64.636" x2="1.681" y2="33.079" gradientUnits="userSpaceOnUse"><stop offset="0.417" stop-color="#FF35EB"></stop><stop offset="0.911" stop-color="#642DFF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint2_linear_172_63130" x1="-29.794" y1="8.353" x2="9.785" y2="26.136" gradientUnits="userSpaceOnUse"><stop offset="0.241" stop-color="#5337FF"></stop><stop offset="0.866" stop-color="#4579FF"></stop></linearGradient><linearGradient id="olympics-small_svg__paint3_linear_172_63130" x1="73.673" y1="52.679" x2="-26.108" y2="4.202" gradientUnits="userSpaceOnUse"><stop offset="0.417" stop-color="#FF35EB"></stop><stop offset="0.911" stop-color="#642DFF"></stop></linearGradient></defs></svg>
+                            </div>
+                        </div>
+                        <div class="middle-sider-grid-item olympic-large">
+                            <div class="olympic-large-image" style="background-size: 128px; background-position:0 0;">  
+                            </div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-192px 0"></div>
+                            <div class="sider-icon-text">直播</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-240px 0"></div>
+                            <div class="sider-icon-text">放映厅</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-864px 0"></div>
+                            <div class="sider-icon-text">短剧</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-384px 0"></div>
+                            <div class="sider-icon-text">知识</div>
+                        </div>
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-480px 0"></div>
+                            <div class="sider-icon-text">游戏</div>
+                        </div>     
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-432px 0"></div>
+                            <div class="sider-icon-text">二次元</div>
+                        </div>  
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-672px 0"></div>
+                            <div class="sider-icon-text">音乐</div>
+                        </div>  
+                        <div class="middle-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-528px 0"></div>
+                            <div class="sider-icon-text">美食</div>
+                        </div>                     
+                    </div>
+                    
+                </div>
+                <div class="bottom-sider">
+                    <div class="bottom-sider-grid">
+                        <div class="bottom-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-768px 0"></div>
+                            <div class="sider-icon-text">设置</div>
+                        </div>  
+                        <div class="bottom-sider-grid-item">
+                            <div class="sider-icon"  style="background-size: 1056px; background-position:-816px 0"></div>
+                            <div class="sider-icon-text">业务合作</div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="right-element">
+            <div class="header">
+                <div class="middle-header">
+                    <div class="search-bar-box">
+                        <input type="text" class="search-bar">
+                        <div class="search-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false"  class="search-icon">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.875 1.5a6.375 6.375 0 103.642 11.608l3.063 3.063a1.125 1.125 0 001.59-1.591l-3.062-3.063A6.375 6.375 0 007.875 1.5zM3.75 7.875a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0z" fill="currentColor" 
+                                class="search-icon-path">
+                                </path>
+                            </svg>                                
+                            <div class="search-text">搜索</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right-header">
+                    <div class="right-header-grid">
+                        <div class="right-header-grid-item more-icon-grid">
+                            <div class="more-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon more-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 8.75H7V7.25H17V8.75ZM17 12.75H7V11.25H17V12.75ZM7 16.75H17V15.25H7V16.75Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">更多</div>
+                            </div>
+                        </div>
+                        <div class="right-header-grid-item diamond-icon-grid">
+                            <div class="diamond-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon diamond-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.60303 11.9999C5.60303 8.46713 8.46689 5.60327 11.9996 5.60327C14.2773 5.60327 16.2777 6.79321 17.412 8.5889C18.0354 9.57571 18.3962 10.7445 18.3962 11.9999C18.3962 15.5326 15.5324 18.3965 11.9996 18.3965C8.46689 18.3965 5.60303 15.5326 5.60303 11.9999ZM11.9996 4.10327C7.63846 4.10327 4.10303 7.6387 4.10303 11.9999C4.10303 16.3611 7.63846 19.8965 11.9996 19.8965C16.3608 19.8965 19.8962 16.3611 19.8962 11.9999C19.8962 10.4527 19.4505 9.0073 18.6802 7.78781C17.2826 5.57536 14.8133 4.10327 11.9996 4.10327ZM14.1261 7.62271V7.12561H12.6261V13.5879H12.6272C12.6272 14.442 11.9421 15.1238 11.11 15.1238C10.2778 15.1238 9.59277 14.442 9.59277 13.5879C9.59277 12.7338 10.2778 12.052 11.11 12.052V10.552C9.43784 10.552 8.09277 11.917 8.09277 13.5879C8.09277 15.2588 9.43784 16.6238 11.11 16.6238C12.7821 16.6238 14.1272 15.2588 14.1272 13.5879H14.1261V10.3601C14.6219 10.6754 15.2097 10.8582 15.8413 10.8582V9.35821C14.8998 9.35821 14.1261 8.58701 14.1261 7.62271Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">冲钻石</div>
+                            </div>
+                        </div>
+                        <div class="right-header-grid-item client-icon-grid">
+                           <div class="client-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon client-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 18.75H6V17.25H18V18.75Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 13.1893V5H12.75V13.1893L15.9697 9.96967L17.0303 11.0303L12.5303 15.5303C12.2374 15.8232 11.7626 15.8232 11.4697 15.5303L6.96967 11.0303L8.03033 9.96967L11.25 13.1893Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">客户端</div>
+                            </div>                            
+                        </div>
+                        <div class="right-header-grid-item quick-acess-icon-grid">
+                            <div class="quick-acess-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon quick-acess-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1795 4.41994C13.6951 3.82589 14.6715 4.19051 14.6715 4.97707V9.75223H16.7789C17.8589 9.75223 18.4306 11.0295 17.7111 11.8349L10.8143 19.5562C10.2624 20.1741 9.24277 19.7179 9.33578 18.8946L9.92092 13.7151H7.85258C6.78103 13.7151 6.20618 12.4551 6.90853 11.6458L13.1795 4.41994ZM13.1715 6.71773L8.40057 12.2151H11.5999L11.0554 17.0346L16.2204 11.2522H13.1715V6.71773Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">快速访问</div>
+                            </div>                                
+                        </div>
+                        <div class="right-header-grid-item wallpaper-icon-grid">
+                            <div class="wallpaper-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon wallpaper-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10335 4.79386C8.86882 4.64984 8.57425 4.64585 8.3359 4.78346C8.09755 4.92108 7.95372 5.17818 7.96117 5.4533L8.05873 9.05336L5.31808 11.3898C5.10864 11.5683 5.01381 11.8473 5.07104 12.1165C5.12826 12.3857 5.32833 12.6019 5.59229 12.6798L9.0463 13.6995L10.4215 17.028C10.5266 17.2824 10.7625 17.4588 11.0362 17.4875C11.3099 17.5163 11.5774 17.3929 11.7331 17.1659L13.3237 14.8471L16.4638 19.3577L17.6949 18.5007L14.6505 14.1276L17.3608 13.9168C17.6352 13.8954 17.8758 13.7255 17.9878 13.4741C18.0997 13.2226 18.065 12.9301 17.8972 12.7119L15.7022 9.85673L16.5462 6.35562C16.6107 6.08806 16.5234 5.80667 16.3189 5.62251C16.1144 5.43835 15.8254 5.38101 15.566 5.47312L12.1723 6.67838L9.10335 4.79386ZM9.56789 9.37117L9.49812 6.79649L11.693 8.14425C11.8862 8.26291 12.1227 8.28777 12.3364 8.21188L14.7635 7.34991L14.16 9.85382C14.1068 10.0743 14.1563 10.3069 14.2945 10.4867L15.8643 12.5286L13.2964 12.7284C13.0704 12.746 12.8644 12.8649 12.7361 13.0519L11.2792 15.1758L10.2957 12.7954C10.2091 12.5858 10.0324 12.4267 9.81491 12.3624L7.34469 11.6332L9.30473 9.96224C9.47729 9.81513 9.57403 9.59784 9.56789 9.37117Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">壁纸</div>
+                            </div>                                
+                        </div>
+                        <div class="right-header-grid-item notice-icon-grid">
+                            <div class="notice-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon notice-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9998 4.50037C9.02034 4.50037 6.55167 6.81159 6.35561 9.78463L5.94855 15.9572H18.0507L17.6441 9.78506C17.4482 6.81184 14.9795 4.50037 11.9998 4.50037ZM7.85236 9.88334C7.99643 7.6987 9.81045 6.00037 11.9998 6.00037C14.1893 6.00037 16.0034 7.69888 16.1473 9.88365L16.4486 14.4572H7.55073L7.85236 9.88334Z" fill="currentColor"></path><path d="M9.75056 19.1392H14.2506V17.6392H9.75056V19.1392Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">通知</div>
+                            </div>                                
+                        </div>
+                        <div class="right-header-grid-item message-icon-grid">
+                            <div class="message-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon message-icon-path">
+                                    <path d="M9.75 10.5001H11.25V12.0001H9.75V10.5001Z" fill="currentColor">
+                                    </path>
+                                    <path d="M13.4999 10.5003H14.9999V12.0003H13.4999V10.5003Z" fill="currentColor">
+                                    </path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3751 4.5C8.44033 4.5 5.25069 7.68926 5.25008 11.6239L5.25008 11.625H6.00008L5.25008 11.6239C5.24846 12.6998 5.49149 13.7608 5.95925 14.727L5.01221 18.9879L9.27309 18.0408C10.2391 18.5085 11.2999 18.7515 12.3756 18.75C16.3105 18.7497 19.5001 15.5599 19.5001 11.625C19.5001 7.68987 16.3102 4.5 12.3751 4.5ZM6.75008 11.625C6.75008 8.5183 9.26838 6 12.3751 6C15.4818 6 18.0001 8.5183 18.0001 11.625C18.0001 14.7317 15.4818 17.25 12.3751 17.25H12.3739C11.4505 17.2514 10.5411 17.0243 9.7267 16.5889L9.48163 16.4579L6.98795 17.0121L7.5422 14.5184L7.41119 14.2734C6.97581 13.459 6.74869 12.5496 6.75008 11.6261L6.75008 11.625Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">私信</div>
+                            </div>                               
+                        </div>
+                        <div class="right-header-grid-item contribute-icon-grid">
+                            <div class="contribute-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" focusable="false" class="right-icon contribute-icon-path">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3487 4.90125H11.3164H11.3164C10.2479 4.90124 9.40104 4.90124 8.71799 4.95587C8.01959 5.01173 7.42807 5.12824 6.88626 5.39747C5.95866 5.8584 5.20716 6.60991 4.74622 7.53751C4.477 8.07932 4.36048 8.67084 4.30462 9.36923C4.24999 10.0523 4.24999 10.8991 4.25 11.9677V12V12.0322C4.24999 13.1008 4.24999 13.9477 4.30462 14.6307C4.36048 15.3291 4.477 15.9206 4.74622 16.4624C5.20716 17.39 5.95866 18.1415 6.88626 18.6025C7.42807 18.8717 8.01959 18.9882 8.71799 19.0441C9.40104 19.0987 10.2479 19.0987 11.3164 19.0987H11.3487H12.6513H12.6836C13.7521 19.0987 14.599 19.0987 15.282 19.0441C15.9804 18.9882 16.5719 18.8717 17.1137 18.6025C18.0413 18.1415 18.7928 17.39 19.2538 16.4624C19.523 15.9206 19.6395 15.3291 19.6954 14.6307C19.75 13.9477 19.75 13.1008 19.75 12.0322V12V11.9677C19.75 10.8991 19.75 10.0523 19.6954 9.36923C19.6395 8.67084 19.523 8.07932 19.2538 7.53751C18.7928 6.60991 18.0413 5.8584 17.1137 5.39747C16.5719 5.12824 15.9804 5.01173 15.282 4.95587C14.599 4.90124 13.7521 4.90124 12.6836 4.90125H12.6513H11.3487ZM7.55376 6.74077C7.8529 6.59212 8.22981 6.4997 8.83757 6.45109C9.45382 6.4018 10.2407 6.40125 11.3487 6.40125H12.6513C13.7593 6.40125 14.5462 6.4018 15.1624 6.45109C15.7702 6.4997 16.1471 6.59212 16.4462 6.74077C17.0809 7.05614 17.5951 7.57033 17.9105 8.205C18.0591 8.50414 18.1515 8.88105 18.2002 9.48882C18.2494 10.1051 18.25 10.8919 18.25 12C18.25 13.108 18.2494 13.8949 18.2002 14.5111C18.1515 15.1189 18.0591 15.4958 17.9105 15.7949C17.5951 16.4296 17.0809 16.9438 16.4462 17.2592C16.1471 17.4078 15.7702 17.5002 15.1624 17.5488C14.5462 17.5981 13.7593 17.5987 12.6513 17.5987H11.3487C10.2407 17.5987 9.45382 17.5981 8.83757 17.5488C8.22981 17.5002 7.8529 17.4078 7.55376 17.2592C6.91909 16.9438 6.4049 16.4296 6.08952 15.7949C5.94088 15.4958 5.84846 15.1189 5.79985 14.5111C5.75056 13.8949 5.75 13.108 5.75 12C5.75 10.8919 5.75056 10.1051 5.79985 9.48882C5.84846 8.88105 5.94088 8.50414 6.08952 8.205C6.4049 7.57033 6.91909 7.05614 7.55376 6.74077ZM11.25 15V12.75H9V11.25H11.25V8.99997H12.75V11.25H15V12.75H12.75V15H11.25Z" fill="currentColor">
+                                    </path>
+                                </svg>
+                                <div class="right-icon-text">投稿</div>
+                            </div>                               
+                        </div>
+                        <div class="right-header-grid-item user-image-box">
+                            <img src="icon/user-image.webp" class="user-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-box">
+                <div class="video-center">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">                         
+                          <div class="swiper-slide">
+                            <div class="video-background-box">
+                                <div class="video-background"></div>
+                            </div>
+                            <div class="video-play-box">
+                                <div class="video-playing-box">
+                                    <div class="video-stop-icon-box" style="display: none;">
+                                        <svg class="video-stop-icon"  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" style="font-size:32px" width="1" height="1">
+                                            <path class="video-stop-icon-path" d="M23.5 15.134C24.1667 15.5189 24.1667 16.4811 23.5 16.866L12.25 23.3612C11.5833 23.7461 10.75 23.265 10.75 22.4952L10.75 9.50481C10.75 8.73501 11.5833 8.25388 12.25 8.63878L23.5 15.134Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                        </svg>  
+                                    </div>
+                                    <div class="video-info-details-box">
+                                        <p class="video-author-text">@不会飞的huih</p>
+                                        <p class="video-info-text">"从前从前有个人爱你很久 但偏偏风渐渐把距离吹得好远 好不容易又能再多爱一天 但故事的最后你好像还是说了拜拜"
+                                            <span class="video-info-label">#2000年初流行音乐</span>
+                                            <span class="video-info-label">#周氏情歌</span>
+                                            <span class="video-info-label">#周杰伦 Jay Chou </span>
+                                            <span class="video-info-label">#晴天</span>
+                                        </p>
+                                    </div>
+                                    <div class="video-play-switch-box">
+                                        <div class="author-image-box">
+                                            <img class="author-image" src="icon/author.jpeg">
+                                            <svg class="author-star-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" width="90" height="90" preserveAspectRatio="xMidYMid meet" style="width: 18px; height: 18px; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><clipPath id="__lottie_element_3349"><rect width="90" height="90" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_3349)"><g transform="matrix(1,0,0,1,45,45)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path fill="#FE2C55" fill-opacity="1" d=" M0,-36 C19.881999969482422,-36 36,-19.881999969482422 36,0 C36,19.881999969482422 19.881999969482422,36 0,36 C-19.881999969482422,36 -36,19.881999969482422 -36,0 C-36,-19.881999969482422 -19.881999969482422,-36 0,-36z"></path></g></g><g transform="matrix(1,0,0,1,45,45)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="#FFFFFF" stroke-opacity="1" stroke-width="6px" d=" M-13.5,0 C-13.5,0 13.562000274658203,0 13.562000274658203,0 C13.562000274658203,0 -13.5,0 -13.5,0z"></path></g><g opacity="1" transform="matrix(0,1,-1,0,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="#FFFFFF" stroke-opacity="1" stroke-width="6px" d=" M-13.5,0 C-13.5,0 13.562000274658203,0 13.562000274658203,0 C13.562000274658203,0 -13.5,0 -13.5,0z"></path></g></g></g></svg>
+                                        </div>
+                                        <div class="like-switch-icon"></div>
+                                        <div class="red-like-switch-icon" style="display: none;"></div>
+                                        <div class="switch-text">12.9万</div>
+                                        <div class="comment-switch-icon"></div>
+                                        <div class="switch-text">3650</div>
+                                        <div class="concern-switch-icon"></div>
+                                        <div class="yellow-concern-switch-icon" style="display: none;"></div>
+                                        <div class="switch-text">2.3万</div>       
+                                        <div class="share-switch-icon"></div>
+                                        <div class="switch-text">3.9万</div>
+                                        <div class="same-switch-icon"></div>
+                                        <div class="switch-text">相关</div>
+                                        <div class="more-switch-icon"></div>
+                                    
+                                    </div>
+                                    <div class="open-comment-box">
+                                        <svg class="open-comment-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="open-comment-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M15.922 4.744a.833.833 0 00-1.178 0l-6.667 6.667a.833.833 0 000 1.178l6.667 6.667a.833.833 0 101.178-1.179L9.845 12l6.077-6.077a.833.833 0 000-1.179z" fill="#FFFFFF" fill-opacity="0.5"></path></svg>
+                                    </div>
+                                    <video id="myVideo" class="video-play" loop>
+                                        <source src="video/Jay.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="video-setting-box">
+                                    <div class="video-slider-box">
+                                        <input id="slider" class="time-control-input" type="range" min="0" max="100" step="1">
+                                    </div>
+                                    <div class="video-others-box comment-box">
+                                        <div class="setting-play-box">
+                                            <svg class="setting-icon play-icon" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" style="font-size:32px" width="1" height="1">
+                                                <path class="setting-icon-path" d="M10 8C9.44772 8 9 8.44772 9 9V23C9 23.5523 9.44772 24 10 24H13C13.5523 24 14 23.5523 14 23V9C14 8.44772 13.5523 8 13 8H10Z" fill="#FFFFFF" fill-opacity="0.6">
+                                                </path>
+                                                <path class="setting-icon-path" d="M19 8C18.4477 8 18 8.44772 18 9V23C18 23.5523 18.4477 24 19 24H22C22.5523 24 23 23.5523 23 23V9C23 8.44772 22.5523 8 22 8H19Z" fill="#FFFFFF" fill-opacity="0.6">
+                                                </path>
+                                            </svg>
+                                            <svg class="setting-icon stop-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" style="font-size:32px" width="1" height="1">
+                                                <path class="setting-icon-path" d="M23.5 15.134C24.1667 15.5189 24.1667 16.4811 23.5 16.866L12.25 23.3612C11.5833 23.7461 10.75 23.265 10.75 22.4952L10.75 9.50481C10.75 8.73501 11.5833 8.25388 12.25 8.63878L23.5 15.134Z" fill="#FFFFFF" fill-opacity="0.9">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                        <div class="setting-time-box">00:00/00:00</div>
+                                        <div class="setting-danmu-box">
+                                            <div class="setting-danmu-inside-box">
+                                                <div class="danmu-long" style="display:none;">
+                                                    <div class="danmu-icon-box danmu-icon-open-close-box">
+                                                        <svg class="danmu-icon danmu-opened-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 24 24">
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M4.29 6.29a2 2 0 012-2h10.693a2 2 0 012 2v5.404a5.55 5.55 0 00-2.472-.55V8.274a.6.6 0 00-.6-.6h-.771l.321-.478a.6.6 0 10-.996-.67l-.771 1.148h-.317l-.772-1.148a.6.6 0 00-.996.67l.322.478h-.775a.6.6 0 00-.6.6v3.772a.6.6 0 00.6.6h1.609a5.602 5.602 0 00-.625.69h-1.463a.6.6 0 100 1.2h.763a5.554 5.554 0 00-.443 2.181c0 .76.152 1.484.428 2.144H6.289a2 2 0 01-2-2V6.29zm11.021 4.997a5.525 5.525 0 00-.552.158h-.626v-.684h1.178v.526zM6.277 7.332a.6.6 0 01.6-.6h2.378a.6.6 0 01.6.6v2.83a.6.6 0 01-.6.6H7.477v1.157h1.778a.6.6 0 01.6.6v3.3a.6.6 0 01-.6.6H6.877a.6.6 0 010-1.2h1.778v-2.1H6.877a.6.6 0 01-.6-.6V10.16a.6.6 0 01.6-.6h1.778V7.932H6.877a.6.6 0 01-.6-.6zm5.48 4.113v-.684h1.177v.684h-1.178zm0-1.884h1.177v-.688h-1.178v.688zm2.377 0h1.177v-.688h-1.178v.688z" fill="#FFFFFF"></path>
+                                                            <path class="danmu-icon-path" d="M20.425 16.713a3.857 3.857 0 11-7.714 0 3.857 3.857 0 017.714 0z" fill="#FFFFFF"></path>
+                                                            <path class="danmu-icon-path" d="M15.258 16.802l1.028 1.079L18 15.859" stroke="#FE2C55" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                                                        </svg>
+                                                        <svg class="danmu-icon danmu-closed-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 24 24">
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M4.29 6.29a2 2 0 012-2h10.693a2 2 0 012 2v5.404a5.55 5.55 0 00-2.472-.55V8.274a.6.6 0 00-.6-.6h-.771l.321-.478a.6.6 0 10-.996-.67l-.771 1.148h-.317l-.772-1.148a.6.6 0 00-.996.67l.322.478h-.775a.6.6 0 00-.6.6v3.772a.6.6 0 00.6.6h1.609a5.602 5.602 0 00-.625.69h-1.463a.6.6 0 100 1.2h.763a5.554 5.554 0 00-.443 2.181c0 .76.152 1.484.428 2.144H6.289a2 2 0 01-2-2V6.29zm11.021 4.997a5.525 5.525 0 00-.552.158h-.626v-.684h1.178v.526zM6.277 7.332a.6.6 0 01.6-.6h2.378a.6.6 0 01.6.6v2.83a.6.6 0 01-.6.6H7.477v1.157h1.778a.6.6 0 01.6.6v3.3a.6.6 0 01-.6.6H6.877a.6.6 0 010-1.2h1.778v-2.1H6.877a.6.6 0 01-.6-.6V10.16a.6.6 0 01.6-.6h1.778V7.932H6.877a.6.6 0 01-.6-.6zm5.48 4.113v-.684h1.177v.684h-1.178zm0-1.884h1.177v-.688h-1.178v.688zm2.377 0h1.177v-.688h-1.178v.688z" fill="#FFFFFF"></path>
+                                                            <circle class="danmu-icon-path" cx="16.566" cy="16.714" r="3.855" fill="#FFFFFF"></circle>
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M17.613 18.824a2.355 2.355 0 01-3.157-3.157l3.157 3.157zm1.061-1.06l-3.158-3.158a2.355 2.355 0 013.158 3.158zm1.747-1.05a3.855 3.855 0 11-7.71 0 3.855 3.855 0 017.71 0z" fill="#FE2C55"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="danmu-icon-box">
+                                                        <svg class="danmu-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" class="vpn447p8" viewBox="0 0 24 24">
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M3.867 6.29a2 2 0 012-2H16.44a2 2 0 012 2v5.25l-1.644-.959a1 1 0 00-.801-.09V8.272a.6.6 0 00-.6-.6h-.76l.32-.48a.6.6 0 00-.999-.666l-.764 1.146h-.305l-.764-1.146a.6.6 0 00-.998.666l.32.48h-.765a.6.6 0 00-.6.6v3.772a.6.6 0 00.6.6h1.57l-.605.353a1 1 0 00-.346.337h-1.091a.6.6 0 100 1.2h.94v4.178c0 .05.005.1.012.147H5.867a2 2 0 01-2-2V6.29zm10.927 4.87l-.488.285h-.67v-.684h1.158v.4zM5.836 7.333a.6.6 0 01.6-.6h2.358a.6.6 0 01.6.6v2.83a.6.6 0 01-.6.6H7.036v1.157h1.758a.6.6 0 01.6.6v3.3a.6.6 0 01-.6.6H6.436a.6.6 0 010-1.2h1.758v-2.1H6.436a.6.6 0 01-.6-.6V10.16a.6.6 0 01.6-.6h1.758V7.932H6.436a.6.6 0 01-.6-.6zm5.443 4.113v-.684h1.157v.684h-1.157zm0-1.884h1.157v-.688h-1.157v.688zm2.357 0h1.158v-.688h-1.158v.688z" fill="#FFFFFF"></path>
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M16.778 12.703a1 1 0 00-.98 0l-2.429 1.366a1 1 0 00-.51.871v2.688a1 1 0 00.51.871l2.429 1.366a1 1 0 00.98 0l2.429-1.366a1 1 0 00.51-.871V14.94a1 1 0 00-.51-.871l-2.429-1.366zm-.49 2.299a1.286 1.286 0 100 2.571 1.286 1.286 0 000-2.571z" fill="#FFFFFF"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="danmu-vertical-line"></div>
+                                                    <input type="text" class="danmu-input">
+                                                    <div class="danmu-icon-box">
+                                                        <svg class="danmu-icon" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" class="Ykki_0Um" width="24"  height="24" >
+                                                            <path class="danmu-icon-path" d="M10 10C10 11.1046 9.32843 12 8.5 12C7.67157 12 7 11.1046 7 10C7 8.89543 7.67157 8 8.5 8C9.32843 8 10 8.89543 10 10Z" fill="#FFFFFF" fill-opacity="0.75"></path>
+                                                            <path class="danmu-icon-path" d="M15.5 12C16.3284 12 17 11.1046 17 10C17 8.89543 16.3284 8 15.5 8C14.6716 8 14 8.89543 14 10C14 11.1046 14.6716 12 15.5 12Z" fill="#FFFFFF" fill-opacity="0.75"></path>
+                                                            <path class="danmu-icon-path" d="M12 16.5303C10.3432 16.5303 9.00004 15.5709 9.00004 14.3874C9.00004 13.2039 15 13.2039 15 14.3874C15 15.5709 13.6569 16.5303 12 16.5303Z" fill="#FFFFFF" fill-opacity="0.75"></path>
+                                                            <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12Z" fill="#FFFFFF" fill-opacity="0.75"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                                <div class="danmu-short" style="display:none;">
+                                                    <svg class="danmu-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" class="vpn447p8" viewBox="0 0 32 32">
+                                                        <path class="danmu-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M7 10a2 2 0 012-2h12a2 2 0 012 2v2.62c-.073.088-.14.185-.199.287L20.6 16.72V13a.6.6 0 00-.6-.6h-1.53l.567-1.132a.6.6 0 00-1.074-.536L17.13 12.4h-.259l-.833-1.668a.6.6 0 00-1.074.536l.566 1.132H14a.6.6 0 00-.6.6v4a.6.6 0 00.6.6h2.4v.8h-2.9a.6.6 0 100 1.2h2.9V21a.6.6 0 101.2 0v-1.4h1.337l-.198.343c-.181.314-.28.669-.288 1.031l-.035 1.703c-.012.59.212 1.044.566 1.323H9a2 2 0 01-2-2V10zm7.6 3.6h1.8v.8h-1.8v-.8zm0 2v.8h1.8v-.8h-1.8zm3 0v.8h1.8v-.8h-1.8zm1.8-1.2v-.8h-1.8v.8h1.8zm-1.8 4v-.8H20a.601.601 0 00.096-.008l-.466.808H17.6zM21 24h.01H21zM10 10.872a.6.6 0 000 1.2h1.4v1.8H10a.6.6 0 00-.6.6v2.5a.6.6 0 00.6.6h1.4v2.3H10a.6.6 0 000 1.2h2a.6.6 0 00.6-.6v-3.5a.6.6 0 00-.6-.6h-1.4v-1.3H12a.6.6 0 00.6-.6v-3a.6.6 0 00-.6-.6h-2z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                        <path class="danmu-icon-path" d="M24.262 14.514a.5.5 0 01.683-.182l1.284.742a.5.5 0 01.183.684l-3.83 6.602a.5.5 0 01-.23.206l-1.528.678a.2.2 0 01-.28-.162l-.177-1.661a.5.5 0 01.065-.304l3.83-6.603z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="setting-grid">
+                                            <div class="setting-grid-item setting-continue-box">
+                                                <div class="switch">
+                                                    <div class="switch-slider"></div>
+                                                </div>
+                                                <span class="label-text">连播</span>
+                                            </div>
+                                            <div class="setting-grid-item setting-clear-box">
+                                                <div class="switch">
+                                                    <div class="switch-slider"></div>
+                                                </div>
+                                                <span class="label-text">清屏</span>
+                                            </div>
+                                            <div class="setting-grid-item setting-definition-box">
+                                                <span class="label-text">智能</span>
+                                            </div>
+                                            <div class="setting-grid-item setting-speed-box">
+                                                <div class="speed-control-box">
+                                                    <input type="radio" id="option1" name="choice" value="0.75">
+                                                    <label for="option1">0.75x</label><br>
+                                        
+                                                    <input type="radio" id="option2" name="choice" value="1.00">
+                                                    <label for="option2">1.00x</label><br>
+                                        
+                                                    <input type="radio" id="option3" name="choice" value="1.25">
+                                                    <label for="option3">1.25x</label><br>
+                                        
+                                                    <input type="radio" id="option4" name="choice" value="1.50">
+                                                    <label for="option4">1.50x</label><br>
+                                        
+                                                    <input type="radio" id="option5" name="choice" value="1.75">
+                                                    <label for="option5">1.75x</label><br>
+                                        
+                                                    <input type="radio" id="option6" name="choice" value="2.00">
+                                                    <label for="option6">2.00x</label><br>
+                                        
+                                                    <input type="radio" id="option7" name="choice" value="3.00">
+                                                    <label for="option7">3.00x</label>
+                                                </div>
+                                                <span class="label-text js-speed-label-text">倍速</span>
+                                            </div>
+                                            <div class="setting-grid-item setting-later-see-box">
+                                                <svg class="setting-icon later-see-icon" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 32 32">
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M8.97 8.73C7.882 8.73 7 9.72 7 10.94v10.58c0 1.22.882 2.21 1.97 2.21h8.254A5.5 5.5 0 0123 15.59v-4.65c0-1.22-.882-2.21-1.97-2.21H8.97zm4.723 10.464l3.822-2.451a1.025 1.025 0 000-1.743l-3.822-2.451c-.724-.464-1.693.035-1.693.871v4.902c0 .837.97 1.336 1.693.872z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M22 25a4 4 0 100-8 4 4 0 000 8zm.4-6a.9.9 0 10-1.8 0v2.5a.9.9 0 00.9.9H24a.9.9 0 100-1.8h-1.6V19z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="setting-grid-item setting-voice-box">
+                                                <div class="voice-control-box">
+                                                    <span class="voice-value-label">value</span>
+                                                    <input id="slider" class="voice-control-input" type="range" min="0" max="100" step="1">
+                                                </div>
+                                                <svg class="setting-icon voice-high-icon" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" style="font-size:32px" width="1"  height="1" >
+                                                    <path class="setting-icon-path" d="M7 13.8669C7 12.7623 7.89543 11.8669 9 11.8669H10L14.3598 8.23369C15.0111 7.69092 16 8.15407 16 9.00191V22.7318C16 23.5797 15.0111 24.0428 14.3598 23.5L10 19.8669H9C7.89543 19.8669 7 18.9714 7 17.8669V13.8669Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" d="M18 18.8669L18 12.8669C19.6569 12.8669 21 14.21 21 15.8669C21 17.5237 19.6569 18.8669 18 18.8669Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" d="M25.25 15.8668C25.25 19.9791 22.0472 23.3432 18 23.601L18 21.0933C20.665 20.8415 22.75 18.5977 22.75 15.8668C22.75 13.136 20.665 10.8921 18 10.6403V8.13269C22.0472 8.3904 25.25 11.7546 25.25 15.8668Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                                <svg class="setting-icon voice-middle-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" style="font-size:32px" width="1"  height="1" >
+                                                    <path class="setting-icon-path" d="M9 12C7.89543 12 7 12.8955 7 14V18C7 19.1046 7.89543 20 9 20H10L14.3598 23.6332C15.0111 24.176 16 23.7128 16 22.865V9.13509C16 8.28725 15.0111 7.8241 14.3598 8.36687L10 12H9Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" d="M18 13.0001L18 19C19.6569 19 21 17.6569 21 16.0001C21 14.3432 19.6569 13.0001 18 13.0001Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M18 8.26587C22.0472 8.52358 25.25 11.8878 25.25 16C25.25 20.1122 22.0472 23.4764 18 23.7341V21.2265C20.665 20.9747 22.75 18.7309 22.75 16C22.75 13.2691 20.665 11.0253 18 10.7735V8.26587Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                                <svg class="setting-icon voice-low-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" style="font-size:32px" width="1"  height="1" >
+                                                    <path class="setting-icon-path" d="M9 12C7.89543 12 7 12.8955 7 14V18C7 19.1046 7.89543 20 9 20H10L14.3598 23.6332C15.0111 24.176 16 23.7128 16 22.865V9.13509C16 8.28725 15.0111 7.8241 14.3598 8.36687L10 12H9Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                    <path class="setting-icon-path" d="M23.5006 20.5038L21.002 17.5496L18.5034 20.5038L17.0006 19.188L19.6942 16.0033L17 12.8178L18.5028 11.502L21.002 14.457L23.5012 11.502L25.004 12.8178L22.3098 16.0033L25.0034 19.188L23.5006 20.5038Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="setting-grid-item setting-webpage-box">
+                                                <svg  class="setting-icon full-webpage-icon"  xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M9.75 8.5a2 2 0 00-2 2v11a2 2 0 002 2h12.5a2 2 0 002-2v-11a2 2 0 00-2-2H9.75zM15 11.25h-3.75a1 1 0 00-1 1V16h2v-2.75H15v-2zm5.75 9.5H17v-2h2.75V16h2v3.75a1 1 0 01-1 1z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                                <svg class="setting-icon exit-full-webpage-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 32 32">
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M7.75 10.5a2 2 0 012-2h12.5a2 2 0 012 2v11a2 2 0 01-2 2H9.75a2 2 0 01-2-2v-11zM14 15.75h-3.75v-2H13V11h2v3.75a1 1 0 01-1 1zm7.75.5H18a1 1 0 00-1 1V21h2v-2.75h2.75v-2z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="setting-grid-item setting-page-box">
+                                                <svg class="setting-icon full-page-icon" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" style="font-size:32px" width="1"  height="1" >
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M9.5 8C8.39543 8 7.5 8.89543 7.5 10V22C7.5 23.1046 8.39543 24 9.5 24H22.5C23.6046 24 24.5 23.1046 24.5 22V10C24.5 8.89543 23.6046 8 22.5 8H9.5ZM19.5 19H17.9986V21H20.5C21.0523 21 21.5 20.5523 21.5 20V17.5H19.5V19ZM12.5 19V17.5H10.5V20C10.5 20.5523 10.9477 21 11.5 21H13.9986V19H12.5ZM12.5 13H13.9986V11H11.5C10.9477 11 10.5 11.4477 10.5 12V14.5H12.5V13ZM19.5 13H17.9986V11H20.5C21.0523 11 21.5 11.4477 21.5 12V14.5H19.5V13Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                                <svg class="setting-icon exit-full-page-icon" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"   focusable="false" style="font-size:32px" width="1"  height="1" >
+                                                    <path class="setting-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M7.5 10C7.5 8.89543 8.39543 8 9.5 8H22.5C23.6046 8 24.5 8.89543 24.5 10V22C24.5 23.1046 23.6046 24 22.5 24H9.5C8.39543 24 7.5 23.1046 7.5 22V10ZM10.5 14.5L10.5 12.5L11.9986 12.5L11.9986 11L13.9986 11L13.9986 13.5C13.9986 14.0523 13.5509 14.5 12.9986 14.5L10.5 14.5ZM20 11H18V13.498C18 14.0503 18.4477 14.498 19 14.498H21.5V12.498H20V11ZM20 19.5H21.5V17.5H19C18.4477 17.5 18 17.9477 18 18.5V21H20V19.5ZM12 21V19.502H10.5V17.502H13C13.5523 17.502 14 17.9497 14 18.502V21H12Z" fill="#FFFFFF" fill-opacity="0.9"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video-comment-box" style="display: none;">
+                                <div class="comment-tab-box">
+                                    <div class="comment-tab-grid-box">
+                                        <div class="comment-tab-text-box">
+                                            TA的作品
+                                        </div>
+                                        <div class="comment-tab-text-box pinglun">
+                                            评论
+                                        </div>
+                                        <div class="comment-tab-text-box">
+                                            相关推荐
+                                        </div>
+                                        <div class="comment-tab-icon">
+                                            <svg class="comment-tab-icon-box" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                                                <path class="comment-tab-icon-path" fill="#FFFFFF" fill-opacity="0.6" fill-rule="evenodd" d="M3.99 3.49a1 1 0 0 1 1.414 0L10 8.085l4.596-4.595a1 1 0 1 1 1.414 1.414L11.414 9.5l4.596 4.596a1 1 0 0 1 .084 1.32l-.084.094a1 1 0 0 1-1.414 0L10 10.914 5.404 15.51a1 1 0 0 1-1.414-1.414L8.585 9.5 3.99 4.904a1 1 0 0 1-.084-1.32z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <hr class="comment-hr">
+                                </div>
+                                <div class="comment-text-box">
+                                    <div class="comment-text-inside-box">
+                                        <span class="head-text">全部评论（<span class="comment-number">3</span>）</span>
+                                        <div id="user1" class="user-comment-box">
+                                            <div id="user1" class="user-comment-image-box">
+                                                <img id="user1" src="icon/user1.jpeg">
+                                            </div>
+                                            <div id="user1" class="user-comment-info-box">
+                                                <div id="user1" class="user-box comment-box">
+                                                    <div id="user1" class="user-name">!1?</div>
+                                                    <div id="user1" class="user-comment">大足石刻呢？</div>
+                                                    <div id="user1" class="user-time">3周前 &#183; 重庆</div>
+                                                    <div id="user1" class="user-comment-icon-box">
+                                                        <div id="user1" class="reply-comment-icon-box comment-icon-box">
+                                                            <div class="reply-comment-icon comment-icon"></div>
+                                                            <div class="reply-comment-icon-label comment-icon-label">回复</div>
+                                                        </div>
+                                                        <div id="user1" class="share-comment-icon-box comment-icon-box">
+                                                            <div class="share-comment-icon comment-icon"></div>
+                                                            <div class="share-comment-icon-label comment-icon-label">分享</div>
+                                                        </div>
+                                                        <div id="user1" class="like-comment-icon-box comment-icon-box">
+                                                            <div class="like-comment-icon comment-icon"></div>
+                                                            <div class="red-like-comment-icon comment-icon" style="display: none;"></div>
+                                                            <div class="like-comment-icon-label comment-icon-label">365</div>
+                                                        </div>
+                                                        <div id="user1" class="dislike-comment-icon-box comment-icon-box">
+                                                            <div class="dislike-comment-icon comment-icon"></div>
+                                                            <div class="full-dislike-comment-icon comment-icon" style="display: none;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="user2" class="others-box comment-box" style="display: none;">
+                                                    <div id="user2" class="user-comment-image-box">
+                                                        <img id="user2" src="icon/user2.jpeg">
+                                                    </div>
+                                                    <div id="user2" class="user-box comment-box">
+                                                        <div id="user2" class="user-name">八百标兵奔北坡</div>
+                                                        <div id="user2" class="user-comment">你觉得怎么样？</div>
+                                                        <div id="user2" class="user-time">1周前 &#183; 安徽</div>
+                                                        <div id="user2" class="user-comment-icon-box">
+                                                            <div id="user2" class="reply-comment-icon-box comment-icon-box">
+                                                                <div class="reply-comment-icon comment-icon"></div>
+                                                                <div class="reply-comment-icon-label comment-icon-label">回复</div>
+                                                            </div>
+                                                            <div id="user2" class="share-comment-icon-box comment-icon-box">
+                                                                <div class="share-comment-icon comment-icon"></div>
+                                                                <div class="share-comment-icon-label comment-icon-label">分享</div>
+                                                            </div>
+                                                            <div id="user2" class="like-comment-icon-box comment-icon-box">
+                                                                <div class="like-comment-icon comment-icon"></div>
+                                                                <div class="red-like-comment-icon comment-icon" style="display: none;"></div>
+                                                                <div class="like-comment-icon-label comment-icon-label">964</div>
+                                                            </div>
+                                                            <div id="user2" class="dislike-comment-icon-box comment-icon-box">
+                                                                <div class="dislike-comment-icon comment-icon"></div>
+                                                                <div class="full-dislike-comment-icon comment-icon" style="display: none;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="user1" class="others-show-box">
+                                                    <div class="others-show-line">
+                                                        <hr style="width:50px; border: 1px solid rgb(255, 255, 255);">
+                                                    </div>
+                                                    <div class="others-show-text">查看全部1条回复</div>
+                                                    <div class="others-show-icon"></div>
+                                                </div>
+                                                <div id="user1" class="others-hidden-box" style="display: none;">
+                                                    <div class="others-hidden-line">
+                                                        <hr style="width:50px; border: 1px solid rgb(255, 255, 255);">
+                                                    </div>
+                                                    <div class="others-hidden-text">收起</div>
+                                                    <div class="others-hidden-icon"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="user3" class="user-comment-box">
+                                            <div id="user3" class="user-comment-image-box">
+                                                <img id="user3" src="icon/user3.jpeg">
+                                            </div>
+                                            <div id="user3" class="user-comment-info-box">
+                                                <div id="user3" class="user-box comment-box">
+                                                    <div id="user3" class="user-name">哇哦大章鱼🐙</div>
+                                                    <div id="user3" class="user-comment">不错</div>
+                                                    <div id="user3" class="user-time">1周前 &#183; 重庆</div>
+                                                    <div id="user3" class="user-comment-icon-box">
+                                                        <div id="user3" class="reply-comment-icon-box comment-icon-box">
+                                                            <div class="reply-comment-icon comment-icon"></div>
+                                                            <div class="reply-comment-icon-label comment-icon-label">回复</div>
+                                                        </div>
+                                                        <div id="user3" class="share-comment-icon-box comment-icon-box">
+                                                            <div class="share-comment-icon comment-icon"></div>
+                                                            <div class="share-comment-icon-label comment-icon-label">分享</div>
+                                                        </div>
+                                                        <div id="user3" class="like-comment-icon-box comment-icon-box">
+                                                            <div class="like-comment-icon comment-icon"></div>
+                                                            <div class="red-like-comment-icon comment-icon" style="display: none;"></div>
+                                                            <div class="like-comment-icon-label comment-icon-label">1429</div>
+                                                        </div>
+                                                        <div id="user3" class="dislike-comment-icon-box comment-icon-box">
+                                                            <div class="dislike-comment-icon comment-icon"></div>
+                                                            <div class="full-dislike-comment-icon comment-icon" style="display: none;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-send-box">
+                                    <div class="comment-send-inside-box">
+                                        <input type="text" class="comment-send-input" placeholder="留下你的精彩评论吧">
+                                        <div class="comment-send-icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path class="comment-send-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M24 10H12a2 2 0 00-2 2v8.92l2.738-2.19a2 2 0 012.53.024l1.738 1.45 4.206-3.442a2 2 0 012.583.043L26 18.734V12a2 2 0 00-2-2zm2 11.071l-.159.182-3.363-2.943-4.206 3.441a2 2 0 01-2.546-.011l-1.739-1.449L10 23.481V24a2 2 0 002 2h12a2 2 0 002-2v-2.929zM12 8a4 4 0 00-4 4v12a4 4 0 004 4h12a4 4 0 004-4V12a4 4 0 00-4-4H12zm4.25 6.25a1.75 1.75 0 11-3.5 0 1.75 1.75 0 013.5 0z" fill="#FFFFFF" fill-opacity="0.6"></path></svg>
+                                        </div>
+                                        <div class="comment-send-icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path class="comment-send-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M10.559 10.14c-2.612 2.392-3.566 5.145-3.566 8.376C6.993 21.817 8.836 29 19.215 29c1.505 0 2.974-.21 4.405-.654 1.57-.487 2.783-1.277 3.798-2.173l.15-.133c.29-.258.606-.537.86-.898.426-.523.71-.905.741-1.198.032-.293.008-.551-.189-.74-.197-.19-.517-.267-.876-.123-.322.129-.663.434-1.02.753l-.125.11c-2.434 2.134-5.158 3.007-7.744 3.007-8.219 0-10.095-5.489-10.095-8.435 0-2.947.856-4.956 2.606-6.798 1.75-1.843 4.62-2.723 7.25-2.723 5.681 0 7.745 4.598 7.745 6.964 0 3.145-1.802 4.54-2.591 5.076-.592.402-1.213.517-1.549.517h-.01c-.365 0-.89 0-1.03-.517-.09-.34.08-1.06.263-1.828.097-.405.197-.824.262-1.207l.94-4.722c.014-.092.021-.177.021-.254 0-.72-.146-1.1-1.103-1.1-.46 0-.77.074-.931.222-.161.148-.274.44-.34.878-.365-.487-.734-.815-1.107-.984-.343-.155-.833-.233-1.468-.233-1.636 0-3.053.783-4.252 2.349-1.103 1.439-1.654 2.977-1.654 4.613 0 1.277.358 2.398 1.074 3.365.796 1.065 1.833 1.597 3.112 1.597 1.095 0 2.147-.366 3.155-1.1.453.74 1.23 1.177 2.323 1.111 5.654-.339 6.962-5.275 6.896-7.783C28.647 12.75 26.288 7 18.976 7c-3.382 0-5.806.747-8.417 3.14zm3.702 9.173c-.068-1.127.093-1.976.814-3.235 1.171-2.046 2.576-2.537 3.502-2.428.898.107 1.128.5 1.27.743l.014.023c.142.24.367.648.367 1.225 0 .938-.292 1.839-.922 3.398-.732 1.84-1.483 2.19-2.4 2.4-1.512.348-2.576-.999-2.645-2.126z" fill="#FFFFFF" fill-opacity="0.6"></path></svg>
+                                        </div>
+                                        <div class="comment-send-icon">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path class="comment-send-icon-path" fill-rule="evenodd" clip-rule="evenodd" d="M27 18a9 9 0 11-18 0 9 9 0 0118 0zm-9 11c6.075 0 11-4.925 11-11S24.075 7 18 7 7 11.925 7 18s4.925 11 11 11zm-2-13.5c0 1.105-.672 2-1.5 2s-1.5-.895-1.5-2 .672-2 1.5-2 1.5.895 1.5 2zm5.5 2c.828 0 1.5-.895 1.5-2s-.672-2-1.5-2-1.5.895-1.5 2 .672 2 1.5 2zM18 22.03c-1.657 0-3-.96-3-2.143 0-1.183 6-1.183 6 0 0 1.184-1.343 2.143-3 2.143z" fill="#FFFFFF" fill-opacity="0.6"></path></svg>
+                                        </div>
+                                        <div id="comment-send-enter" class="comment-send-icon" style="display:none;">
+                                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg" class="" viewBox="0 0 36 36"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 30C23.851 30 29 24.851 29 18.5S23.851 7 17.5 7 6 12.149 6 18.5 11.149 30 17.5 30zm-5.16-13.883a1.16 1.16 0 001.64 1.64l2.395-2.394v8.838a1.16 1.16 0 002.321 0v-8.839l1.028 1.028 1.368 1.368a1.16 1.16 0 101.64-1.641l-4.219-4.22a1.382 1.382 0 00-1.954 0l-4.22 4.22h.001z" fill="#FE2C55" fill-opacity="1"></path><path d="M12.34 16.117a1.16 1.16 0 001.64 1.64l2.395-2.394v8.838a1.16 1.16 0 002.321 0v-8.839l1.028 1.028 1.368 1.368a1.16 1.16 0 101.64-1.641l-4.219-4.22a1.382 1.382 0 00-1.954 0l-4.22 4.22h.001z" fill="#FFFFFF" fill-opacity="1.0"></path></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                          </div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 4</div>
+                          <div class="swiper-slide">Slide 5</div>
+                          <div class="swiper-slide">Slide 6</div>
+                          <div class="swiper-slide">Slide 7</div>
+                          <div class="swiper-slide">Slide 8</div>
+                          <div class="swiper-slide">Slide 9</div>
+                          <div class="swiper-slide">Slide 10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-sider">
+                    <div class="video-sider-icon-box">
+                        <div class="last-video-icon-box">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><g filter="url(#newAbove_svg__filter0_d_1651_162618)" fill="none"><path d="M7.269 16.316a1.393 1.393 0 010-1.97l5.056-5.055a1.393 1.393 0 011.97 0l.011.011 5.045 5.045a1.393 1.393 0 11-1.97 1.97l-4.071-4.072-4.071 4.071a1.393 1.393 0 01-1.97 0z" fill="none" class="last-video-icon"></path></g><defs><filter id="newAbove_svg__filter0_d_1651_162618" x="5.861" y="8.883" width="14.898" height="9.842" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="1"></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1651_162618"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow_1651_162618" result="shape"></feBlend></filter></defs></svg>
+                        </div>
+                        <div class="next-video-icon-box">
+                            <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" fill="red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><g filter="url(#newBelow_svg__filter0_d_1646_162559)" fill="none"><path d="M7.269 9.29a1.393 1.393 0 000 1.97l5.056 5.056a1.393 1.393 0 001.97 0l.011-.011 5.045-5.045a1.393 1.393 0 10-1.97-1.97l-4.071 4.072L9.239 9.29a1.393 1.393 0 00-1.97 0z" fill="none" class="next-video-icon"></path></g><defs><filter id="newBelow_svg__filter0_d_1646_162559" x="5.861" y="8.883" width="14.898" height="9.842" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="1"></feOffset><feGaussianBlur stdDeviation="0.5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"></feColorMatrix><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1646_162559"></feBlend><feBlend in="SourceGraphic" in2="effect1_dropShadow_1646_162559" result="shape"></feBlend></filter></defs></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="icon\sider\douyincon\test.png" class="douyin-icon-background">
+
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="scripts/swiper.js"></script>
+    <script src="jquery-3.7.1.min/jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.14.0/jquery-ui.js"></script>
+    <script src="scripts/video.js"></script>
+    <script src="scripts/comment.js"></script>
+</body>
+</html>

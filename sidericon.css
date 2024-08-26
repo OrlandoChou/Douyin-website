@@ -1,0 +1,27 @@
+.sider-icon {
+    padding:0;
+    background-image:url(https://lf3-cdn-tos.bytegoofy.com/obj/goofy/ies/douyin_web/media/nav_dark_entry_optimize_v3.307d7a3bd5afe0bb.png);
+    background-repeat: no-repeat;
+    height: 24px;
+    width:24px;
+    flex-shrink: 0;
+    filter: invert(50%) sepia(8%) saturate(14%) hue-rotate(13deg) brightness(99%) contrast(88%);
+}
+.sider-icon:hover {
+    filter:none;
+}
+.next-video-icon{
+    height: 28px;
+    width: 28px;
+    background-image: url('icon/svg-export/svgexport-22.svg');
+    background-repeat: no-repeat;
+}
+.last-video-icon{
+    height: 28px;
+    width: 28px;
+    background-image: url('icon/svg-export/svgexport-21.svg');
+    background-repeat: no-repeat;
+}
+.next-video-icon:hover{
+    color: white;
+}

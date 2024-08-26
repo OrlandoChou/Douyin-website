@@ -1,0 +1,186 @@
+.middle-sider{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.bottom-sider{
+    margin: 0;
+    padding: 0;
+    height: 88px;
+    border-top: 2px solid rgba(33, 35, 46, 0.3); /* 这里可以根据需要调整边框的颜色和宽度 */
+    box-shadow: -10px -5px 10px rgba(0, 0, 0, 0.3); /* 这里可以根据需要调整阴影的大小和颜色 */
+}
+
+.bottom-sider-grid,
+.middle-sider-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+}
+.middle-sider-grid-item{
+    height: 40px;
+    width:128px;
+    flex-direction: row;
+    padding: 0;
+    background-color:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.choose-box{
+    background-color: rgba(64, 64, 64, 0.25);
+    border-radius: 15px;
+    position: relative;
+}
+.upgrade-icon{
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-image: url(../icon/svg-export/边框刷新.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    right: 8px;
+    transform: scale(0.8);
+    z-index: 100;
+    display: none;
+}
+.choose-box:hover .upgrade-icon{
+    display: inline-block;
+}
+.choose-box .sider-icon{
+    filter:none;
+}
+.choose-box .sider-icon-text{
+    color: rgb(255, 255, 255);
+}
+.bottom-sider-grid-item{
+    height: 40px;
+    width:128px;
+    flex-direction: row;
+    padding: 0;
+    background-color:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+}
+.bottom-sider-grid-item:hover,
+.middle-sider-grid-item:hover{
+    background-color: rgba(64, 64, 64, 0.25);
+    border-radius: 15px;
+}
+.sider-icon {
+    padding:0;
+    background-image:url(https://lf3-cdn-tos.bytegoofy.com/obj/goofy/ies/douyin_web/media/nav_dark_entry_optimize_v3.307d7a3bd5afe0bb.png);
+    background-repeat: no-repeat;
+    height: 24px;
+    width:24px;
+    flex-shrink: 0;
+    filter: invert(50%) sepia(8%) saturate(14%) hue-rotate(13deg) brightness(99%) contrast(88%);
+    transition: filter 0.15s;
+    margin-right: 12px;
+}
+.bottom-sider-grid-item:hover .sider-icon,
+.middle-sider-grid-item:hover .sider-icon {
+    filter:none;
+}
+.sider-icon-text{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.bottom-sider-grid-item:hover .sider-icon-text,
+.middle-sider-grid-item:hover .sider-icon-text{
+    color: rgb(255, 255, 255);
+}
+.custom-hr-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-hr {
+    border: 0;
+    height: 0.5px;
+    width:72%;
+    background-color: rgba(128, 128, 128, 0.1);
+    margin: 6px 6px;
+}
+.sider-text-mine{
+
+    font-size:14px;
+    color: rgb(128, 128, 128);
+}
+.sider-text-mine-icon{
+    height: 11.2px;
+}
+.olympic-small:hover,
+.olympic-large:hover{
+    background-color: initial;
+}
+.middle-sider-grid-item.olympic-large{
+    width: 128px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.olympic-large-image{
+    background-image: url(https://lf3-cdn-tos.bytegoofy.com/obj/goofy/ies/douyin_web/media/olympics.67a783205bc3d198.png);
+    height: 40px;
+    width: 128px;
+    margin-left: 12px;
+}
+@media (max-width: 1280px) {
+    .middle-sider-grid-item {
+        height: 60px;
+        width:60px;
+        flex-direction: column;
+    }
+    .bottom-sider-grid-item{
+        height: 50px;
+        width:60px;
+        flex-direction: column;        
+    }
+    .sider-icon{
+        margin-right: 0;
+    }
+    .middle-sider-grid-item.olympic-large{
+        display: none;
+    }
+    .bottom-sider{
+        height: 122px;
+    }
+}
+@media (min-width: 1280px) {
+    .bottom-sider-grid-item,
+    .middle-sider-grid-item {
+        height: 40px;
+        width:128px;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .sider-icon{
+        margin-right: 12px;
+    }
+    .sider-icon,
+    .sider-text-mine{
+        margin-left: 24px;
+    }
+    .middle-sider-grid-item.olympic-small{
+        display: none;
+    }
+    .bottom-sider{
+        height: 88px;
+    }
+}

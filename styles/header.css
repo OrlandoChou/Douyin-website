@@ -1,0 +1,205 @@
+.middle-header{
+    display: flex;
+    align-items: center;  
+    justify-content:center;
+    flex:3;
+}
+.right-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;
+}
+@media (max-width: 1196px) {
+    .middle-header{
+        justify-content:left;
+    }
+    .right-header{
+        flex:none;
+        width: 350px;
+    }
+    .search-bar-box{
+        margin-left:0px;
+    }
+}
+@media (min-width: 1196px) {
+    .middle-header{
+        justify-content:center;
+    }
+    .right-header{
+        flex:1;
+    }
+    .search-bar-box{
+        margin-left:250px;
+    }
+}
+.search-bar-box{
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    border: 2px;
+    border-radius: 12px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    transition: border-color 0.15s;
+}
+.search-bar-box:hover{
+    border-color: rgb(255, 255, 255);
+}
+.search-bar {
+    width: 100%;
+    height: 40px;
+    border:none;
+    padding: 0 20px;
+    font-size: 16px;
+    box-shadow: none !important;
+    background: none;
+    transition: border-color 0.15s;
+    caret-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+
+    cursor: text;
+}
+.search-bar:focus {
+    outline: none;
+    box-shadow: none;
+}
+.search-bar-box:hover .search-bar{
+    border-color: rgb(255, 255, 255);
+    cursor: text;
+}
+
+.search-icon-box{
+    width: 144px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.15s;
+}
+.search-bar-box:hover .search-icon-box{
+    background-color: rgb(255, 255, 255);
+}
+.search-icon{
+    padding-left:5px ;
+    margin-top: 10px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: color 0.15s background-color 0.15s;
+    background-color:none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar-box:hover .search-icon-path{
+    color: rgb(0, 0, 0);
+}
+
+.search-text{
+    min-width: 44px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: color 0.15s;
+}
+.search-bar-box:hover .search-text{
+    color: rgb(0, 0, 0);
+}
+
+.right-header-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 5px;
+    padding: 2px;
+}
+.right-header-grid-item{
+    margin:0;
+    padding: 0;
+    width: 48px;
+    background-color:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+.right-icon{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    color: rgb(128, 128, 128);
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.client-icon-path{
+    padding-left: 3px;
+}
+.diamond-icon-path{
+    padding-left: 3px;
+}
+.quick-acess-icon-path{
+    padding-left: 9px;
+}
+.right-header-grid-item:hover .right-icon{
+    color: rgb(255, 255, 255);
+}
+.right-icon-text{
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.right-header-grid-item:hover .right-icon-text{
+    color: rgb(255, 255, 255);
+}
+@media (max-width: 1196px) {
+    .diamond-icon-grid {
+        display: none;
+    }
+    .client-icon-grid {
+        display: none;
+    }
+    .quick-acess-icon-grid {
+        display: none;
+    }
+    .right-header-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media (min-width: 1196px) {
+    .more-icon-grid {
+        display: none;
+    }
+    .right-header-grid {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+.user-image-box{
+    margin-left:0;
+    padding-left:0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.user-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
